@@ -1,6 +1,6 @@
-# React Native Text Prototype
+# React Native Drag Text Editor
 
-React Native Text Prototype is kind a Text Editor still in development for photo editing / manipulation cases.
+React Native Drag Text Editor is kind a Text Editor for both IOS and Android, still in development for photo editing / manipulation cases.
 
   - Drag and Drop Text
   - Resize Text
@@ -9,14 +9,14 @@ React Native Text Prototype is kind a Text Editor still in development for photo
 ### Installation
 
 ```sh
-$ npm install react-native-text-prototype
+$ npm install react-native-drag-text-editor
 ```
 
 ### Usage
 
 ```javascript  
 import React, { Component } from "react";
-import TextPrototype from 'react-native-text-prototype'
+import DragTextEditor from 'react-native-drag-text-editor'
 
 export default class App extends Component {
   constructor(props) {
@@ -25,7 +25,7 @@ export default class App extends Component {
 
   render() {
     return (  
- <TextPrototype/> 
+ <DragTextEditor/> 
   }
  )
 }
