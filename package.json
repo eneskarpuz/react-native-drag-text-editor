@@ -1,0 +1,52 @@
+{
+  "name": "react-native-drag-text-editor",
+  "version": "0.0.1",
+  "description": "React Native Text Prototype for photo editing / manipulation cases.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "16.13.1",
+    "react-native": "0.63.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/runtime": "^7.11.2",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "babel-jest": "^26.3.0",
+    "eslint": "^7.7.0",
+    "jest": "^26.4.2",
+    "metro-react-native-babel-preset": "^0.63.0",
+    "react-test-renderer": "16.13.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eneskarpuz/react-native-drag-text-editor.git"
+  },
+  "keywords": [
+    "\"react",
+    "native\"",
+    "\"react",
+    "component\"",
+    "\"text",
+    "editor\"",
+    "\"text\"",
+    "\"photo",
+    "editor\"",
+    "\"image",
+    "editor\"",
+    "\"image",
+    "manipulating\"",
+    "photo",
+    "manipulating\""
+  ],
+  "author": "Enes Karpuz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eneskarpuz/react-native-drag-text-editor.git/issues"
+  },
+  "homepage": "https://github.com/eneskarpuz/react-native-drag-text-editor.git#readme"
+
+}
