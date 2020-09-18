@@ -35,8 +35,8 @@ export default class DragTextEditor extends Component {
       y,
       w,
       h,
-      minW,
-      minH,
+      minWidth,
+      minHeight,
     } = props;
  
     this.state = {
@@ -47,11 +47,10 @@ export default class DragTextEditor extends Component {
       LEFT_EDGE,
       CENTER,
     ],
-     isSelected: false,
       x:x,
       y:y,
-      w: w < minW ? minW : w,
-      h: h < minH ? minH :h,
+      w: w < minWidth ? minWidth : w,
+      h: h < minHeight ? minHeight :h,
       ended:true,
       giveInput:false,
       text: this.props.PlaceHolder==null?TEXT:this.props.PlaceHolder,
@@ -216,16 +215,10 @@ childMR=()=>{
 }
  
 
-  onResizeStart = (coord) => {
+  onResizeStart = (location) => {
     const {
       onResizeStart,
     } = this.props;
-
-    this.setState(() => {
-      return {
-        isSelected: true,
-      };
-    });
 
     if (onResizeStart !== null) {
       onResizeStart([
@@ -235,11 +228,10 @@ childMR=()=>{
     }
   }
 
-  onResizeMR = (coord) => {
+  onResizeMR = (location) => {
     const {
-      minW,
       isResizable,
-      limitation,
+      windowBorder,
       onResize,
     } = this.props;
 
@@ -248,14 +240,14 @@ childMR=()=>{
     }
 
     this.setState(() => {
-      const newW = this.state.w + coord[0];
+      const calcWidth = this.state.w + location[0];
 
-      if (newW >= this.props.minW) {
-        if (limitation.w >= this.state.x + newW) {
-          this.state.w = newW;
+      if (calcWidth >= this.props.minWidth) {
+        if (windowBorder.w >= this.state.x + calcWidth) {
+          this.state.w = calcWidth;
         }
       }  
-      if(newW<=150){
+      if(calcWidth<=150){
         this.state.w = 150;
       }
       if (onResize !== null) {
@@ -269,11 +261,11 @@ childMR=()=>{
     });
   }
 
-  onResizeML = (coord) => {
+  onResizeML = (location) => {
     const {
-      minW,
+      minWidth,
       isResizable,
-      limitation,
+      windowBorder,
       onResize,
     } = this.props;
 
@@ -282,12 +274,12 @@ childMR=()=>{
     }
 
     this.setState(() => {
-      const newX = this.state.x + coord[0];
-      const newW = this.state.x + this.state.w - newX;
+      const newX = this.state.x + location[0];
+      const calcWidth = this.state.x + this.state.w - newX;
 
-      if (newW >= minW) {
-        if (limitation.x <= newX) {
-          this.state.w = newW;
+      if (calcWidth >= minWidth) {
+        if (windowBorder.x <= newX) {
+          this.state.w = calcWidth;
           this.state.x = newX;
         }
       }
@@ -303,17 +295,12 @@ childMR=()=>{
     });
   }
 
-   onResizeEnd = (coord) => {
+   onResizeEnd = (location) => {
     const {
       onResizeEnd,
     } = this.props;
 
-    this.setState(() => {
-      return {
-        isSelected: false,
-      };
-    });
-
+   
     if (onResizeEnd !== null) {
       onResizeEnd([
         this.state.x,
@@ -322,17 +309,10 @@ childMR=()=>{
     }
   }
 
-   onDragStart = (coord) => {
+   onDragStart = (location) => {
     const {
       onDragStart,
     } = this.props;
-
-    this.setState(() => {
-      return {
-        isSelected: true,
-        
-      };
-    });
 
     if (onDragStart !== null) {
       onDragStart([
@@ -342,10 +322,10 @@ childMR=()=>{
       ]);
     }
   }
-  onDrag = (coord) => {
+  onDrag = (location) => {
     const {
       isDraggable,
-      limitation,
+      windowBorder,
       onDrag,
     } = this.props;
 
@@ -354,14 +334,14 @@ childMR=()=>{
     }
 
     this.setState(() => {
-      const newX = this.state.x + coord[0];
-      const newY = this.state.y + coord[1];
+      const newX = this.state.x + location[0];
+      const newY = this.state.y + location[1];
 
-        if (limitation.x <= newX && limitation.w >= newX + this.state.w) {
+        if (windowBorder.x <= newX && windowBorder.w >= newX + this.state.w) {
           this.state.x = newX;
         }
 
-        if (limitation.y <= newY && limitation.h >= newY + this.state.h) {
+        if (windowBorder.y <= newY && windowBorder.h >= newY + this.state.h) {
           this.state.y = newY;
         }
 
@@ -375,19 +355,13 @@ childMR=()=>{
     });
   }
 
-  onDragEnd = (coord) => {
+  onDragEnd = (location) => {
     const {
       onDragEnd,
     } = this.props;
-    const{
-      isBorder,
-    } = this.state;
-    this.setState(() => {
-      return {
-        isSelected: false,
-      };
-    });
-      this.isBorder();
+   
+    this.isBorder();
+   
     if (onDragEnd !== null) {
       onDragEnd([
         this.state.x,
@@ -566,9 +540,9 @@ DragTextEditor.defaultProps = {
   y: 0,
   w: 200,
   h: 200,
-  minW: 200,
-  minH: 200,
-  limitation: {
+  minWidth: 200,
+  minHeight: 200,
+  windowBorder: {
     x: 0,
     y: 0,
     w: Dimensions.get('window').width,
@@ -602,9 +576,9 @@ DragTextEditor.propTypes = {
   y: PropTypes.number,
   w: PropTypes.any,
   h: PropTypes.any,
-  minW: PropTypes.number,
-  minH: PropTypes.number,
-  limitation: PropTypes.shape({
+  minWidth: PropTypes.number,
+  minHeight: PropTypes.number,
+  windowBorder: PropTypes.shape({
     x: PropTypes.number.isRequired,
     y: PropTypes.number.isRequired,
     w: PropTypes.number.isRequired,

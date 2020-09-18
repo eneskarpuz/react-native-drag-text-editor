@@ -51,8 +51,8 @@ export default class App extends Component {
   render() {
     return (  
         <DragTextEditor
-          minW={100}
-          minH={100}
+          minWidth={100}
+          minHeight={100}
           w={200}
           h={200}
           x={WINDOW.width/4}
@@ -108,8 +108,8 @@ export default class App extends Component {
  |y   | `150`  | String| Y location of Components|
   |w  | `200`  | Number| First Width |
   |h   | `200`  | Number| First Height |
-  |minW   | `200`  | Number| Minimum Width |
-  |minH   | `200`  | Number| Minimum Height |
+  |minWidth   | `200`  | Number| Minimum Width |
+  |minHeight   | `200`  | Number| Minimum Height |
 
 ## Features
 
