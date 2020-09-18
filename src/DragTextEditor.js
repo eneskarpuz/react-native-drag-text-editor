@@ -195,7 +195,7 @@ childTL=()=>{
 }
 childTR=()=>{
  return(
-  <TouchableOpacity onPress={()=>this.props.TopRightAction()} style={styles.Top}>
+  <TouchableOpacity onPress={()=>this.props.TopRightAction===undefined?null:this.props.TopRightAction()} style={styles.Top}>
      { this.props.TopRightIcon === null? 
         <Image style={styles.ico} source={CLOSE_ICON}/>
           :this.props.TopRightIcon
@@ -422,24 +422,25 @@ childMR=()=>{
       );
     });
   }
- onlaymy = (event) => {
+  calcLayout = (event) => {
     this.setState({h: event.nativeEvent.layout.height});
   };
-
   isBorder = () => {
     this.setState({isBorder: true,giveInput:false});
   };
-
-isOtherBorder = () => {
+  isOtherBorder = () => {
     this.setState({isBorder: false});
   };
-onText=(text)=>{
- this.setState({text});
-}
-validPress=()=>{
-  this.isOtherBorder();
-  this.props.centerPress();
-}
+  onText=(text)=>{
+    this.setState({text});
+  }
+  validPress=()=>{
+    this.isOtherBorder(); 
+      if(this.props.centerPress!=undefined){
+        this.props.centerPress();
+      } 
+        else null;
+  }
   render() {
     const {
       x,
@@ -469,7 +470,7 @@ validPress=()=>{
          }}>
          
         
-   <View style={{borderColor:isBorder?"transparent":"white",borderWidth:1}} onLayout={this.onlaymy}>
+   <View style={{borderColor:isBorder?"transparent":"white",borderWidth:1}} onLayout={this.calcLayout}>
          {this.state.giveInput?
           <TextInput
             style={{
@@ -573,6 +574,9 @@ DragTextEditor.defaultProps = {
     w: Dimensions.get('window').width,
     h: Dimensions.get('window').height,
   },
+centerPress:null,
+TopLeftAction:null,
+TopRightAction:null,
   TopLeftIcon:null,
   TopRightIcon:null,
   FontFamily:null,
@@ -606,6 +610,9 @@ DragTextEditor.propTypes = {
     w: PropTypes.number.isRequired,
     h: PropTypes.number.isRequired,
   }),
+centerPress:PropTypes.func,
+TopLeftAction:PropTypes.func,
+TopRightAction:PropTypes.func,
   TopLeftIcon:PropTypes.func,
   TopRightIcon:PropTypes.func,
   FontFamily:PropTypes.string,
