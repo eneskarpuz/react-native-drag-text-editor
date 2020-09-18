@@ -10,18 +10,18 @@ React Native Text Prototype is kind a Text Editor still in development for photo
   <img src="https://img.shields.io/github/languages/code-size/eneskarpuz/react-native-drag-text-editor?style=flat-square"/> 
 </p>
 
-# Showcase [ IOS13 / AndroidAPI30 ]
+## Showcase [ IOS13 / AndroidAPI30 ]
 
 <p align="center">
-  <img src="https://github.com/eneskarpuz/TextEditorPlus/blob/master/gifs/cIOS.gif" alt="IOS13"/>
-  <img src="https://github.com/eneskarpuz/TextEditorPlus/blob/master/gifs/lastAndro.gif" alt="AndroidAPI30"/>
+  <img src="https://github.com/eneskarpuz/TextEditorPlus/blob/master/gifs/wIOS.gif" alt="IOS13"/>
+  <img src="https://github.com/eneskarpuz/TextEditorPlus/blob/master/gifs/wAndro.gif" alt="AndroidAPI30"/>
 </p> 
 
   - Drag and Drop Text
   - Resize Text
   - Edit & Type 
 
-# Installation
+## Installation
 
 ```sh
 $ npm install react-native-drag-text-editor --save
@@ -35,7 +35,7 @@ $ npm install react-native-drag-text-editor --save
 $ pod install
 ```
 
-### Usage
+## Usage
 
 ```javascript  
 import React, { Component } from "react";
@@ -79,7 +79,8 @@ export default class App extends Component {
 
 ```
 
-### Properties
+## Properties
+
 |    Prop    |   Default     |  Type     |  Description  |
 | :--------------: |:------------------:| :----------------:|:------------------------|
 |centerPress               |  -    |    function      | Center Pressed handler |
@@ -101,22 +102,28 @@ export default class App extends Component {
  |FontSize    | `15`  | String|Font Size|
  |LetterSpacing   | `0`  | String|Letter Spacing|
  |BackgroundColor   | `transparent`  | String|Background Color|
-|TextAlign   | `Roboto`  | String|Text Align|
-|LineHeight   | `18`  | String|Line Height|
+ |TextAlign   | `Roboto`  | String|Text Align| 
+ |LineHeight   | `18`  | String|Line Height|
  | x   | `80`  | String|X location of Components|
-  |y   | `150`  | String| Y location of Components|
+ |y   | `150`  | String| Y location of Components|
   |w  | `200`  | Number| First Width |
   |h   | `200`  | Number| First Height |
   |minW   | `200`  | Number| Minimum Width |
   |minH   | `200`  | Number| Minimum Height |
 
 ## Features
-- Performs(Visible) in Black and White backgrounds
-![alt text](https://github.com/eneskarpuz/TextEditorPlus/blob/master/gifs/borderinfo.gif)
 
-- Logs
-![alt text](https://github.com/eneskarpuz/TextEditorPlus/blob/master/gifs/draginfo.gif)
+#### Performs(Visible) in Black and White backgrounds
 
+<p align="center">
+<img src="https://github.com/eneskarpuz/TextEditorPlus/blob/master/gifs/borderinfo.gif"/>
+</p>
+
+#### Logs  
+
+<p align="center">
+<img src="https://github.com/eneskarpuz/TextEditorPlus/blob/master/gifs/draginfo.gif"/>
+</p>
 
 ## To Do
 - [ ] Performance Optimization (Code Duplicates etc.)
@@ -128,4 +135,4 @@ export default class App extends Component {
 
 License
 ----
-This project is licenced under the [MIT License](https://opensource.org/licenses/mit-license.html).
+This project is licensed under the [MIT License](https://opensource.org/licenses/mit-license.html).
