@@ -1,6 +1,6 @@
 {
   "name": "react-native-drag-text-editor",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "React Native Text Prototype for photo editing / manipulation cases.",
   "main": "index.js",
   "scripts": {
