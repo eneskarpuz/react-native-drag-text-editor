@@ -13,6 +13,7 @@ React Native Text Prototype is kind a Text Editor still in development for photo
 </p>
 
 ## Showcase [ IOS13 / AndroidAPI30 ]
+Check https://github.com/eneskarpuz/TextEditorPlus for full Example in Readme.
 
 <p align="center">
   <img src="https://github.com/eneskarpuz/TextEditorPlus/blob/master/gifs/wIOS.gif" alt="IOS13"/>
