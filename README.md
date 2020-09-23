@@ -1,7 +1,7 @@
 
 # React Native Drag Text Editor
 
-React Native Text Prototype is kind a Text Editor still in development for photo editing / manipulation cases.
+React Native Drag Text Editor is kind a Text Editor still in development for photo editing / manipulation cases.
 <p align="center">
   <a href="https://www.npmjs.com/package/react-native-drag-text-editor">
 <img src="https://img.shields.io/badge/dynamic/json?color=success&label=npm&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2Feneskarpuz%2Freact-native-drag-text-editor%2Fmaster%2Fpackage.json&style=flat-square"/> 
