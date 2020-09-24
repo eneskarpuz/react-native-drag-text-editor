@@ -24,9 +24,7 @@ const TEXT ="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
 const CLOSE_ICON = require('../icons/closed.png');
 const COMPASS_ICON = require('../icons/compassed.png');
 
-
 export default class DragTextEditor extends Component {
-
   constructor(props) {
     super(props);
 
@@ -376,22 +374,22 @@ childMR=()=>{
       h,
     } = this.state;
 
-   return this.state.holders.map((connectorType) => {
+   return this.state.holders.map((holderType) => {
       return (
         <Holder
-          key={connectorType}
-          type={connectorType}
-          size={this.holderObjMap[connectorType].size}
-          holderHeight={this.holderObjMap[connectorType].holderHeight(h)}    
-          holderWidth={this.holderObjMap[connectorType].holderWidth(w)}    
-          backColor={this.holderObjMap[connectorType].backColor}
-          x={this.holderObjMap[connectorType].holderLeft(w)}
-          y={this.holderObjMap[connectorType].holderTop(h)}
-          onStart={this.holderObjMap[connectorType].onStart}
-          onMove={this.holderObjMap[connectorType].onMove}
-          onEnd={this.holderObjMap[connectorType].onEnd}
+          key={holderType}
+          type={holderType}
+          size={this.holderObjMap[holderType].size}
+          holderHeight={this.holderObjMap[holderType].holderHeight(h)}    
+          holderWidth={this.holderObjMap[holderType].holderWidth(w)}    
+          backColor={this.holderObjMap[holderType].backColor}
+          x={this.holderObjMap[holderType].holderLeft(w)}
+          y={this.holderObjMap[holderType].holderTop(h)}
+          onStart={this.holderObjMap[holderType].onStart}
+          onMove={this.holderObjMap[holderType].onMove}
+          onEnd={this.holderObjMap[holderType].onEnd}
         > 
-           {this.holderObjMap[connectorType].children}
+           {this.holderObjMap[holderType].children}
         </Holder>
       );
     });
