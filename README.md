@@ -2,8 +2,6 @@
 # React Native Drag Text Editor
 
 React Native Drag Text Editor is kind a Text Editor still in development for photo editing / manipulation cases.
-<!-- Place this tag where you want the button to render. -->
-<a class="github-button" href="https://github.com/eneskarpuz/react-native-drag-text-editor/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork eneskarpuz/react-native-drag-text-editor on GitHub">Fork</a>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/react-native-drag-text-editor">
