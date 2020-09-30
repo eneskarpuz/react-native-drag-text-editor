@@ -1,7 +1,7 @@
 
 # React Native Drag Text Editor
 
-React Native Drag Text Editor is kind a Text Editor still in development for photo editing / manipulation cases.
+React Native Drag Text Editor is kind a Rich Text Editor still in development for photo editing / manipulation cases.
 
 <p align="center">
   <a href="https://www.npmjs.com/package/react-native-drag-text-editor">
