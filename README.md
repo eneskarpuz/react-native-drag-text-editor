@@ -77,8 +77,8 @@ export default class App extends Component {
           onResize={()=>console.log("- Resizing...")}
           onResizeEnd={()=>console.log("- Resize Ended")}
         /> 
+    )
   }
- )
 }
 
 ```
