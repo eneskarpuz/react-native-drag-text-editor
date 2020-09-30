@@ -44,7 +44,7 @@ $ pod install
 ```javascript  
 import React, { Component } from "react";
 import {Dimensions} from "react-native";
-import DragTextEditor from 'react-native-drag-text-editor';
+import {DragTextEditor} from 'react-native-drag-text-editor';
 const WINDOW = Dimensions.get('window');
 
 export default class App extends Component {
