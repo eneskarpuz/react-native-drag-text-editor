@@ -117,13 +117,13 @@ export default class App extends Component {
 
 ## Features
 
-#### Performs(Visible) in Black and White backgrounds
+#### - Performs(Visible) in Black and White Backgrounds
 
 <p align="center">
 <img src="https://github.com/eneskarpuz/TextEditorPlus/blob/master/gifs/borderinfo.gif"/>
 </p>
 
-#### Logs  
+#### - Logs  
 
 <p align="center">
 <img src="https://github.com/eneskarpuz/TextEditorPlus/blob/master/gifs/draginfo.gif"/>
