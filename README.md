@@ -89,7 +89,7 @@ export default class App extends Component {
 | :--------------: |:------------------:| :----------------:|:------------------------|
 |centerPress               |  -    |    function      | Center Pressed handler |
 |TopRightAction               | -          |    function      | Top Right Press handler |
-|TopLeftAction               | -          |    function     |Top Right Press handler |
+|TopLeftAction               | -          |    function     |Top Left Press handler |
 |isDraggable               | `true`          |    boolean      | Draggable condition |
 |isResizable               | `true`          |    boolean    |Resizable condition|
 |onDragStart               | -        |    function      | Drag Start event handler|
