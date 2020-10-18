@@ -13,7 +13,7 @@ React Native Drag Text Editor is kind a Rich Text Editor still in development fo
 </a>
 </p>
 
-###  If this project has helped you out, please support with a star :star:
+##   :star: If this project has helped you out, please support with a star.
 
 
 ## Showcase [ IOS13 / AndroidAPI30 ]
