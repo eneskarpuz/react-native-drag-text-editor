@@ -13,7 +13,9 @@ React Native Drag Text Editor is kind a Rich Text Editor still in development fo
 </a>
 </p>
 ### If this project has helped you out, please support with a star  
-<a class="github-button" href="https://github.com/eneskarpuz/react-native-drag-text-editor" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star eneskarpuz/react-native-drag-text-editor on GitHub">This repo looking for Star</a> 
+<a class="github-button" href="https://github.com/eneskarpuz/react-native-drag-text-editor" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star eneskarpuz/react-native-drag-text-editor on GitHub">Star</a>
+
+
 
 ## Showcase [ IOS13 / AndroidAPI30 ]
 ### Check https://github.com/eneskarpuz/TextEditorPlus for full Example in Readme.
