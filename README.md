@@ -33,14 +33,6 @@ React Native Drag Text Editor is kind a Rich Text Editor still in development fo
 $ npm install react-native-drag-text-editor --save
 ```
 
-#### IOS 
-
-- Don't forget Pods.
-
-```sh
-$ pod install
-```
-
 ## Usage
 
 ```javascript  
