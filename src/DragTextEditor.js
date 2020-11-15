@@ -403,9 +403,13 @@ childMR=()=>{
   isOtherBorder = () => {
     this.setState({isBorder: false});
   };
-  onText=(text)=>{
-    this.setState({text});
-  }
+  onText = (text) => {
+    this.setState({ text }, () => {
+      if (text && this.props.onChangeText) {
+        this.props.onChangeText(this.state.text);
+      }
+    });
+  };
   validPress=()=>{
     this.isOtherBorder(); 
       if(this.props.centerPress!=undefined){
