@@ -405,8 +405,8 @@ childMR=()=>{
   };
   onText = (text) => {
     this.setState({ text }, () => {
-      if (text && this.props.onChangeText) {
-        this.props.onChangeText(this.state.text);
+      if (text && this.props.onTextChanged) {
+        this.props.onTextChanged(this.state.text);
       }
     });
   };
