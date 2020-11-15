@@ -64,6 +64,7 @@ export default class App extends Component {
           isResizable={true}
           TopRightAction={()=>console.log("-Top Right Pressed")}
           centerPress={()=>console.log("-Center Pressed")} 
+          onTextChanged={(text)=>console.log("Text contents =", text)}
           onDragStart={()=>console.log("-Drag Started")}
           onDragEnd={()=>console.log("- Drag ended")}
           onDrag={()=>console.log("- Dragging...")}
@@ -86,6 +87,7 @@ export default class App extends Component {
 |TopLeftAction               | -          |    function     |Top Left Press handler |
 |isDraggable               | `true`          |    boolean      | Draggable condition |
 |isResizable               | `true`          |    boolean    |Resizable condition|
+|onTextChanged               | -         |    function    |Text changed callback|
 |onDragStart               | -        |    function      | Drag Start event handler|
 |onDrag               | -          |    function      | Drag handler |
 |onDragEnd               | -          |    function      |Drag End event handler |
