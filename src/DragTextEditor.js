@@ -409,7 +409,7 @@ childMR=()=>{
   } = this.props;
     this.setState({ text }, () => {
       if (onTextChanged) {
-        onTextChanged(this.state.text);
+        onTextChanged(text);
       }
     });
   };
