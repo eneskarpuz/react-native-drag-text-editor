@@ -82,16 +82,16 @@ export default class App extends Component {
 
 |    Prop    |   Default     |  Type     |  Description  |
 | :--------------: |:------------------:| :----------------:|:------------------------|
-|centerPress               |  -    |    function      | Center Pressed handler |
-|TopRightAction               | -          |    function      | Top Right Press handler |
-|TopLeftAction               | -          |    function     |Top Left Press handler |
+|centerPress               |  console.log |    function      | Center Pressed handler |
+|TopRightAction               | console.log         |    function      | Top Right Press handler |
+|TopLeftAction               | console.log         |    function     |Top Left Press handler |
 |isDraggable               | `true`          |    boolean      | Draggable condition |
 |isResizable               | `true`          |    boolean    |Resizable condition|
-|onTextChanged               | -         |    function    |Text changed callback|
-|onDragStart               | -        |    function      | Drag Start event handler|
-|onDrag               | -          |    function      | Drag handler |
-|onDragEnd               | -          |    function      |Drag End event handler |
-|onResizeStart               | -          |    function      | Resize Start event handler |
+|onTextChanged               | console.log    |    function    |Text changed callback|
+|onDragStart               | console.log       |    function      | Drag Start event handler|
+|onDrag               | console.log       |    function      | Drag handler |
+|onDragEnd               | console.log    |    function      |Drag End event handler |
+|onResizeStart               | console.log    |    function      | Resize Start event handler |
 |onResize            | -        |    function      | Resize event handler |
 |onResizeEnd| -          |    function      | Resize End event handler |
 | TopLeftIcon| `./icons/compassed.png`| function | Clickable Top Left Icon Function Component |
@@ -136,3 +136,9 @@ export default class App extends Component {
 License
 ----
 This project is licensed under the [MIT License](https://opensource.org/licenses/mit-license.html).
+
+### Attributions
+-----
+<span>Photo by <a href="https://unsplash.com/@bernardhermant?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Bernard Hermant</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+<div>Icons made by <a href="https://creativemarket.com/Becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+<div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
