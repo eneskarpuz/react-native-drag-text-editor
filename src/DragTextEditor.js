@@ -51,7 +51,7 @@ export default class DragTextEditor extends Component {
       h: h < minHeight ? minHeight :h,
       ended:true,
       giveInput:false,
-      text: this.props.PlaceHolder==null?TEXT:this.props.PlaceHolder,
+      text: this.props.text==null?TEXT:this.props.PlaceHolder,
       isBorder:false,
     };
     
