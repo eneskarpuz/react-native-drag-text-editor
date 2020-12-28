@@ -456,6 +456,7 @@ childMR=()=>{
               zIndex:10000,
               elevation:0.01,
               fontFamily: this.props.FontFamily,
+              fontVariant: this.props.FontVariant,
               color:this.props.FontColor,
               fontSize: this.props.FontSize,
               letterSpacing: this.props.LetterSpacing,
@@ -467,6 +468,7 @@ childMR=()=>{
               overflow: 'hidden',
               margin: 10,
               padding:5,
+              textDecorationLine: this.props.TextDecorationLine
             }}
           selectTextOnFocus={true}
           multiline={true}
@@ -486,10 +488,12 @@ childMR=()=>{
               textAlign: this.props.TextAlign,//'right',
               lineHeight: this.props.LineHeight,
               fontWeight: 'normal',
+              fontVariant: this.props.FontVariant,
               overflow: 'hidden',
               display: 'flex',
               margin: 10,
               padding:5,
+              textDecorationLine: this.props.TextDecorationLine
             }}
             > 
               {this.state.text}
@@ -595,6 +599,7 @@ TopRightAction:PropTypes.func,
   TopLeftIcon:PropTypes.func,
   TopRightIcon:PropTypes.func,
   FontFamily:PropTypes.string,
+  FontVariant: PropTypes.array,
   LetterSpacing:PropTypes.number,
   FontColor:PropTypes.string,
   FontSize:PropTypes.number,
@@ -610,4 +615,5 @@ TopRightAction:PropTypes.func,
   onResizeStart: PropTypes.func,
   onResize: PropTypes.func,
   onResizeEnd: PropTypes.func,
+  textDecorationLine: PropTypes.string
 };
