@@ -468,7 +468,8 @@ childMR=()=>{
               overflow: 'hidden',
               margin: 10,
               padding:5,
-              textDecorationLine: this.props.TextDecorationLine
+              textDecorationLine: this.props.TextDecorationLine,
+              transform: [{ rotate: this.props.Rotation + 'deg'}]
             }}
           selectTextOnFocus={true}
           multiline={true}
@@ -493,7 +494,8 @@ childMR=()=>{
               display: 'flex',
               margin: 10,
               padding:5,
-              textDecorationLine: this.props.TextDecorationLine
+              textDecorationLine: this.props.TextDecorationLine,
+              transform: [{ rotate: this.props.Rotation + 'deg'}]
             }}
             > 
               {this.state.text}
@@ -577,7 +579,9 @@ TopRightAction:null,
   onResizeStart: null,
   onResize: null,
   onResizeEnd: null,
-
+  FontVariant: [],
+  TextDecorationLine: null,
+  Rotation: 0
 };
 
 DragTextEditor.propTypes = {
@@ -615,5 +619,6 @@ TopRightAction:PropTypes.func,
   onResizeStart: PropTypes.func,
   onResize: PropTypes.func,
   onResizeEnd: PropTypes.func,
-  textDecorationLine: PropTypes.string
+  TextDecorationLine: PropTypes.string,
+  Rotation: PropTypes.number
 };
