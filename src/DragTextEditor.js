@@ -580,7 +580,7 @@ TopRightAction:null,
   onResize: null,
   onResizeEnd: null,
   FontVariant: [],
-  TextDecorationLine: null,
+  TextDecorationLine: 'none',
   Rotation: 0
 };
 
