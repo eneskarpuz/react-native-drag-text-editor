@@ -60,8 +60,11 @@ export default class App extends Component {
           TextAlign={"left"}
           LetterSpacing={0}
           FontSize={15}
+          FontVariant=["small-caps"]
+          TextDecorationLine="none"
           isDraggable={true}
           isResizable={true}
+          Rotation={0}
           TopRightAction={()=>console.log("-Top Right Pressed")}
           centerPress={()=>console.log("-Center Pressed")} 
           onTextChanged={(text)=>console.log("Text contents =", text)}
@@ -96,22 +99,31 @@ export default class App extends Component {
 |onResizeEnd| -          |    function      | Resize End event handler |
 | TopLeftIcon| `./icons/compassed.png`| function | Clickable Top Left Icon Function Component |
  | TopRightIcon | `./icons/closed.png`| function | Clickable Top Right Icon Function Component |   
- |text               | `Lorem Ipsum...`          |    String      | Value of text |
+ |PlaceHolder               | `Lorem Ipsum...`          |    String      | Value of text |
  |FontFamily        | `Roboto`  | String|Font Family|
  |FontColor     | `#000`  | String | Text Color|
  |FontSize    | `15`  | String|Font Size|
+ |FontVariant    | `[]`  | Array of enum|Font Variation, read more here https://reactnative.dev/docs/text-style-props#fontvariant|
  |LetterSpacing   | `0`  | String|Letter Spacing|
  |BackgroundColor   | `transparent`  | String|Background Color|
  |TextAlign   | `Roboto`  | String|Text Align| 
+ |TextDecorationLine   | `none`  | String|Text Decoration Lines enum('none', 'underline', 'line-through', 'underline line-through')|
  |LineHeight   | `18`  | String|Line Height|
  | x   | `80`  | String|X location of Components|
  |y   | `150`  | String| Y location of Components|
   |w  | `200`  | Number| First Width |
   |h   | `200`  | Number| First Height |
+  |Rotation   | `0`  | Number| Rotation of the text. As react-native still doesn't provide support for setting origin of tranform, you may face issue with rotation as the origin will be at the end of the text |
   |minWidth   | `200`  | Number| Minimum Width |
   |minHeight   | `200`  | Number| Minimum Height |
 
 ## Features
+
+### - Tips
+
+Rotation of the text can be controlled with the help of https://github.com/software-mansion/react-native-gesture-handler . You need to update the number in degree with gestures. You can also follow an easier way to do this, for example, you may use a Slider component.
+
+Remember, `FontVariant` expects an array not a string. For more details, check the offcial blog of react-native.
 
 #### - Performs(Visible) in Black and White Backgrounds
 
@@ -129,7 +141,7 @@ export default class App extends Component {
 - [ ] Performance Optimization (Code Duplicates etc.)
 - [ ] textID and textInAction Bug (Type Error)
 - [ ] Dynamic Border Management
-- [ ]  Add Rotation/Rotate Icon
+- [x]  Add Rotation/Rotate Icon
 - [ ]  Add Center-Snap
 
 
